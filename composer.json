@@ -1,0 +1,33 @@
+{
+    "name": "utagawavtt/phplist-restapi-client",
+    "type": "library",
+    "description": "PHP client to interact with the php REST API.",
+    "keywords": [
+        "utagawavtt",
+        "phplist",
+        "API",
+        "client"
+    ],
+    "homepage": "https://github.com/keosion/phplist-restapi-client",
+    "license": "GPL-3.0",
+    "authors" : [
+        {
+            "name": "Jeremy Bouquain",
+            "email": "dev@utagawavtt.com",
+            "homepage": "http://www.utagawavtt.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "guzzlehttp/guzzle": ">=3.8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "UtagawaVtt\\": "src"
+        }
+    }
+}
