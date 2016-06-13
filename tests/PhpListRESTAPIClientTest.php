@@ -93,6 +93,16 @@ class PhpListRESTAPIClientTest extends \PHPUnit_Framework_TestCase
 
     /**
      */
+    public function testSubscriberUpdate()
+    {
+        $phpList = new PhpListRESTAPIClient('', '', '', '', $this->clientMock);
+
+        $this->assertEquals(true, $phpList->subscriberUpdate('', ''), 'First attempt should succeed');
+        $this->assertEquals(false, $phpList->subscriberUpdate('', ''), 'Second attempt should fail');
+    }
+
+    /**
+     */
     public function testSubscriberDelete()
     {
         $phpList = new PhpListRESTAPIClient('', '', '', '', $this->clientMock);
