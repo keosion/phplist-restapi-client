@@ -254,6 +254,34 @@ class PhpListRESTAPIClient
     }
 
     /**
+     * Update a subscriber.
+     *
+     * This is the main method to use to Update a subscriber. It will update email address.
+     *
+     * @param int $subscriberId subscriber Id
+     * @param string $newEmailAddress email address of the subscriber to add
+     *
+     * @return int $subscriberId if updated, or false if failed
+     */
+    public function subscriberUpdate($subscriberId, $newEmailAddress)
+    {
+        $post_params = array(
+            'id' => $subscriberId,
+            'email' => $newEmailAddress,
+            'confirmed' => 1,
+            'htmlemail' => 1,
+        );
+        $result = $this->callAPI('subscriberUpdate', $post_params);
+
+        if ($this->checkValidity($result) && isset($result->data) && isset($result->data->id) && !empty($result->data->id)) {
+            $subscriberId = $result->data->id;
+            return $subscriberId;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Delete a subscriber.
      *
      * This is the main method to use to delete a subscriber.
