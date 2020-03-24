@@ -2,7 +2,7 @@
     "name": "utagawavtt/phplist-restapi-client",
     "type": "library",
     "description": "PHP client to interact with the php REST API.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "keywords": [
         "utagawavtt",
         "phplist",
